@@ -1,0 +1,8 @@
+TRACE - 2020-10-09T13:43:29.422511200 : Duplicate Username.
+TRACE - 2020-10-09T13:43:38.741825200 : User was not found.
+TRACE - 2020-10-09T13:46:55.336406 : Did not enter correct role.
+TRACE - 2020-10-09T13:47:25.946990800 : Password was not long enough
+TRACE - 2020-10-09T13:47:50.014923300 : Duplicate Username.
+TRACE - 2020-10-09T13:48:14.846328800 : Did not enter correct role.
+TRACE - File Not Found Exception: java.io.FileNotFoundException: Users.txt (The system cannot find the file specified)
+TRACE - 2020-10-09T14:18:17.053720300 : Succesfully Created a user.
