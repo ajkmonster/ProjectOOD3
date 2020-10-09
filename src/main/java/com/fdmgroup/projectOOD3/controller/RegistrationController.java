@@ -1,5 +1,8 @@
 package com.fdmgroup.projectOOD3.controller;
 
+import org.apache.log4j.Logger;
+
+import com.fdmgroup.projectOOD3.exceptions.CustomException;
 import com.fdmgroup.projectOOD3.model.ReadCommand;
 import com.fdmgroup.projectOOD3.model.User;
 import com.fdmgroup.projectOOD3.model.UserFactory;
@@ -10,7 +13,7 @@ public class RegistrationController implements ReadCommand, WriteCommand {
 	private ReadCommand r;
 	private WriteCommand w;
 	private UserFactory uF;
-
+	private static Logger gLogger = Logger.getLogger("generalLogger");
 
 	public RegistrationController() {
 		super();
@@ -47,7 +50,7 @@ public class RegistrationController implements ReadCommand, WriteCommand {
 		this.uF = uF;
 	}
 	
-	public void registerNewUser(String username, String password,String role) {
+	public void registerNewUser(String username, String password,String role) throws CustomException {
 		User newUser = uF.createUser(username, password, role);
 		writeUser(newUser);
 	}
@@ -57,12 +60,12 @@ public class RegistrationController implements ReadCommand, WriteCommand {
 	}
 
 	@Override
-	public void writeUser(User user) {
+	public void writeUser(User user) throws CustomException {
 		w.writeUser(user);
 	}
 
 	@Override
-	public User readUser(String username) {
+	public User readUser(String username) throws CustomException {
 		return r.readUser(username);
 	}
 
