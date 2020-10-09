@@ -1,4 +1,4 @@
-package com.fdmgroup.projectOOD3.controller;
+package com.fdmgroup.projectOOD3;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
